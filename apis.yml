@@ -1,0 +1,67 @@
+name: Argus
+description: APIs for the Argus monitoring and alerting platform
+image: https://example.com/argus-logo.png
+url: https://argus.example.com
+created: '2024-01-15'
+modified: '2024-01-15'
+apis:
+- name: Argus Monitoring API
+  description: Core API for managing monitors, metrics, and alerts in Argus
+  image: https://example.com/argus-api-icon.png
+  humanURL: https://argus.example.com/docs
+  baseURL: https://api.argus.example.com/v1
+  tags:
+  - monitoring
+  - alerts
+  - metrics
+  - observability
+  properties:
+  - type: Documentation
+    url: https://argus.example.com/docs/api
+  - type: OpenAPI
+    url: https://api.argus.example.com/v1/openapi.json
+  - type: Authentication
+    url: https://argus.example.com/docs/authentication
+  - type: RateLimits
+    url: https://argus.example.com/docs/rate-limits
+  contact:
+  - type: Support
+    url: https://argus.example.com/support
+  - type: Email
+    url: mailto:support@argus.example.com
+- name: Argus Alerts API
+  description: API for creating, managing, and receiving alerts
+  humanURL: https://argus.example.com/docs/alerts
+  baseURL: https://api.argus.example.com/v1/alerts
+  tags:
+  - alerts
+  - notifications
+  - incidents
+  properties:
+  - type: Documentation
+    url: https://argus.example.com/docs/alerts-api
+  - type: Webhooks
+    url: https://argus.example.com/docs/webhooks
+- name: Argus Metrics API
+  description: API for submitting and querying time-series metrics data
+  humanURL: https://argus.example.com/docs/metrics
+  baseURL: https://api.argus.example.com/v1/metrics
+  tags:
+  - metrics
+  - time-series
+  - analytics
+  properties:
+  - type: Documentation
+    url: https://argus.example.com/docs/metrics-api
+  - type: Examples
+    url: https://argus.example.com/docs/metrics-examples
+maintainers:
+- name: Argus Platform Team
+  email: platform@argus.example.com
+  url: https://argus.example.com/team
+tags:
+- monitoring
+- observability
+- alerts
+- metrics
+- SaaS
