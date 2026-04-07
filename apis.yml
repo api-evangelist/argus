@@ -13,10 +13,10 @@ apis:
     humanURL: https://argus.example.com/docs
     baseURL: https://api.argus.example.com/v1
     tags:
-      - monitoring
-      - alerts
-      - metrics
-      - observability
+      - Alerts
+      - Metrics
+      - Monitoring
+      - Observability
     properties:
       - type: Documentation
         url: https://argus.example.com/docs/api
@@ -37,9 +37,9 @@ apis:
     humanURL: https://argus.example.com/docs/alerts
     baseURL: https://api.argus.example.com/v1/alerts
     tags:
-      - alerts
-      - notifications
-      - incidents
+      - Alerts
+      - Incidents
+      - Notifications
     properties:
       - type: Documentation
         url: https://argus.example.com/docs/alerts-api
@@ -51,9 +51,9 @@ apis:
     humanURL: https://argus.example.com/docs/metrics
     baseURL: https://api.argus.example.com/v1/metrics
     tags:
-      - metrics
-      - time-series
-      - analytics
+      - Analytics
+      - Metrics
+      - Time-Series
     properties:
       - type: Documentation
         url: https://argus.example.com/docs/metrics-api
@@ -64,8 +64,8 @@ maintainers:
     email: platform@argus.example.com
     url: https://argus.example.com/team
 tags:
-  - monitoring
-  - observability
-  - alerts
-  - metrics
+  - Alerts
+  - Metrics
+  - Monitoring
+  - Observability
   - SaaS
