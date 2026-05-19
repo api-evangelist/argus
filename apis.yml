@@ -102,6 +102,8 @@ apis:
       - type: Documentation
         url: https://www.altusgroup.com/solutions/argus-intelligence/
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/argus-software-solutions
   - type: Website
     url: https://www.altusgroup.com/argus/
   - type: Documentation
