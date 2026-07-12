@@ -102,10 +102,14 @@ apis:
       - type: Documentation
         url: https://www.altusgroup.com/solutions/argus-intelligence/
 common:
+  - type: DomainSecurity
+    url: security/argus-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/argus-software-solutions
   - type: Website
     url: https://www.altusgroup.com/argus/
+  - type: Blog
+    url: https://www.altusgroup.com/insights/
   - type: Documentation
     url: https://www.altusgroup.com/argus/downloads/
   - type: GettingStarted
