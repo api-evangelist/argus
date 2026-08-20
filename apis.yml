@@ -27,6 +27,14 @@ tags:
   - Asset Management
   - Commercial Real Estate
   - Fund Management
+  - Portfolio-Management
+  - Real Estate Software
+  - Valuation
+tags_raw:
+  - Altus Group
+  - Asset Management
+  - Commercial Real Estate
+  - Fund Management
   - Portfolio Management
   - Real Estate Software
   - Valuation
@@ -64,6 +72,11 @@ apis:
     tags:
       - Cash Flow Modeling
       - Commercial Real Estate
+      - Portfolio-Management
+      - Valuation
+    tags_raw:
+      - Cash Flow Modeling
+      - Commercial Real Estate
       - Portfolio Management
       - Valuation
     properties:
@@ -77,6 +90,11 @@ apis:
       value, scenario analysis, and cash flow forecasting.
     humanURL: https://www.altusgroup.com/solutions/argus-developer/
     tags:
+      - Cash Flow
+      - Development
+      - Feasibility Analysis
+      - Real-Estate
+    tags_raw:
       - Cash Flow
       - Development
       - Feasibility Analysis
