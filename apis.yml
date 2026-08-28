@@ -9,6 +9,17 @@ description: >-
   fund management). ARGUS is recognized as the industry standard and taught at 200+ universities
   worldwide. The ARGUS API provides integration capabilities across cloud-enabled ARGUS solutions.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
