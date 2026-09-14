@@ -1,0 +1,147 @@
+generated: '2026-09-14'
+method: probed
+source: >-
+  Live anonymous HTTP probes of every host this record knows — the registrable domain and
+  www, the ARGUS product login/console hosts named on https://www.altusgroup.com/login/,
+  and the Microsoft Entra ID tenant that the ARGUS Intelligence Platform's own
+  /config.js names as its authorization server.
+provider: ARGUS
+providerId: argus
+description: >-
+  Well-known discovery probe for the ARGUS platform (Altus Group). One real document was
+  served: an OpenID Connect discovery document on service.altusgroup.com, the Salesforce
+  Experience Cloud support community that fronts ARGUS customer support. Every other path
+  on every other host 404d, 403d, or answered 200 with a single-page-app HTML shell, which
+  is not a document. The ARGUS Intelligence Platform's authorization server is a Microsoft
+  Entra ID tenant on login.microsoftonline.com; its metadata is anonymous and is recorded
+  here because the provider's own front-end config names it.
+notes:
+  - >-
+    cloud.altusplatform.com (ARGUS Cloud Portal), platform.altusintelligence.com (ARGUS
+    Intelligence Platform) and members.estatemaster.com (ARGUS EstateMaster) are SPA
+    catch-alls: every /.well-known/* path returns HTTP 200 with the app's index.html.
+    Recorded as misses, not hits.
+  - >-
+    No /.well-known/security.txt, /.well-known/api-catalog, /.well-known/ai-plugin.json,
+    agent card or llms.txt is served anywhere on the ARGUS estate.
+hosts:
+  - host: www.altusgroup.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: altusgroup.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: service.altusgroup.com
+    note: >-
+      ARGUS support community (Salesforce Experience Cloud). The OIDC discovery document is
+      real and machine-readable; the remaining paths return the community's 401 login page.
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 200
+        file: argus-service-openid-configuration.json
+      - path: /.well-known/security.txt
+        status: 401
+      - path: /.well-known/oauth-authorization-server
+        status: 401
+      - path: /.well-known/api-catalog
+        status: 401
+      - path: /.well-known/ai-plugin.json
+        status: 401
+  - host: cloud.altusplatform.com
+    note: SPA catch-all — every path answers 200 with the portal's index.html, not a document.
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        note: HTML application shell, not a security.txt — recorded as a miss.
+      - path: /.well-known/openid-configuration
+        status: 200
+        note: HTML application shell, not a discovery document — recorded as a miss.
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        note: HTML application shell — recorded as a miss.
+      - path: /.well-known/api-catalog
+        status: 200
+        note: HTML application shell — recorded as a miss.
+      - path: /.well-known/ai-plugin.json
+        status: 200
+        note: HTML application shell — recorded as a miss.
+  - host: platform.altusintelligence.com
+    note: >-
+      ARGUS Intelligence Platform. Static assets are served from S3/CloudFront; unmatched
+      paths return either the SPA shell or an S3 AccessDenied XML body.
+    documents:
+      - path: /.well-known/security.txt
+        status: 403
+      - path: /.well-known/openid-configuration
+        status: 200
+        note: HTML application shell, not a discovery document — recorded as a miss.
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        note: HTML application shell — recorded as a miss.
+      - path: /.well-known/api-catalog
+        status: 200
+        note: HTML application shell — recorded as a miss.
+      - path: /.well-known/ai-plugin.json
+        status: 403
+  - host: login.microsoftonline.com
+    note: >-
+      Microsoft Entra ID tenant 4299aec5-b3b8-413e-a612-88e3c0b4c972, named as the
+      authorization server by https://platform.altusintelligence.com/config.js. Operated by
+      Microsoft on Altus Group's behalf, not served from an altusgroup.com host — recorded
+      here because it is the real, anonymous auth-server metadata for the ARGUS
+      Intelligence Platform.
+    documents:
+      - path: /4299aec5-b3b8-413e-a612-88e3c0b4c972/v2.0/.well-known/openid-configuration
+        status: 200
+        file: argus-intelligence-entra-openid-configuration.json
+  - host: members.estatemaster.com
+    note: ARGUS EstateMaster SPA — every path answers 200 with the app shell.
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        note: HTML application shell — recorded as a miss.
+      - path: /.well-known/openid-configuration
+        status: 200
+        note: HTML application shell — recorded as a miss.
+      - path: /.well-known/api-catalog
+        status: 200
+        note: HTML application shell — recorded as a miss.
+  - host: live.voyanta.com
+    note: ARGUS Voyanta — origin refuses anonymous requests to /.well-known/*.
+    documents:
+      - path: /.well-known/security.txt
+        status: 403
+      - path: /.well-known/openid-configuration
+        status: 403
+      - path: /.well-known/api-catalog
+        status: 403
+  - host: taliance.cloud.com
+    note: ARGUS Taliance (Citrix StoreFront) — origin refuses anonymous requests.
+    documents:
+      - path: /.well-known/security.txt
+        status: 403
+      - path: /.well-known/openid-configuration
+        status: 403
+      - path: /.well-known/api-catalog
+        status: 403
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

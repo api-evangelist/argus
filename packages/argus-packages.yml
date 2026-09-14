@@ -1,0 +1,49 @@
+specification: API Commons Packages
+specificationVersion: '0.1'
+generated: '2026-09-14'
+method: searched
+source: >-
+  registry.npmjs.org search (text=altusgroup, text="argus altus"), pypi.org/pypi/*/json,
+  azuresearch-usnc.nuget.org query, and the GitHub organization
+  https://github.com/AltusGroup (HTTP 200, 0 public repositories).
+provider: ARGUS
+providerId: argus
+description: >-
+  No first-party ARGUS or Altus Group client library exists in any public package registry.
+  This is a measured absence, not an unchecked gap — each registry below was queried and
+  each returned either nothing or packages belonging to unrelated projects that share the
+  "Argus" name.
+package_count: 0
+official_package_count: 0
+packages: []
+registries_checked:
+  - registry: npm
+    endpoint: https://registry.npmjs.org/-/v1/search?text=altusgroup
+    result: no packages
+  - registry: npm
+    endpoint: https://registry.npmjs.org/-/v1/search?text=argus%20altus
+    result: >-
+      Only unrelated projects — @ory/argus, @vforsh/argus, argus-media-cli, @qlub-foss/argus
+      and similar. None reference Altus Group or commercial real estate.
+  - registry: PyPI
+    endpoint: https://pypi.org/pypi/argus-api/json
+    result: >-
+      HTTP 200 but belongs to mnemonic AS (the Argus security platform), a different
+      company. argus-enterprise and altusgroup both 404.
+  - registry: NuGet
+    endpoint: https://azuresearch-usnc.nuget.org/query?q=argus+altus
+    result: no packages
+  - registry: GitHub
+    endpoint: https://github.com/AltusGroup
+    result: >-
+      The organization exists and is Altus Group's (blog https://www.altusgroup.com/,
+      location Canada, created 2022-10-31) but publishes 0 public repositories, so no SDK,
+      sample or spec is distributed there.
+note: >-
+  ARGUS integration is distributed as installed desktop software and pre-built connectors
+  (Yardi, MRI) obtained through an Altus Group account, and as SharePoint-hosted downloads
+  from https://www.altusgroup.com/argus/downloads/ — not as registry-published client
+  libraries. No SDKs pointer is emitted in apis.yml because there is no SDK to point at.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

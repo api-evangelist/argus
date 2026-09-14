@@ -1,0 +1,51 @@
+specification: API Commons ChangeLog
+specificationVersion: '0.1'
+generated: '2026-09-14'
+method: searched
+source: https://www.altusgroup.com/support/argus-enterprise-platform-updates/
+provider: ARGUS
+providerId: argus
+description: >-
+  Altus Group publishes a dated platform-updates page for ARGUS Enterprise rather than an
+  API changelog. It is a migration timeline: what changes, when, and which build a customer
+  must be on. Release notes for each ARGUS product ship as documents on the downloads
+  pages, which redirect to SharePoint and are not anonymously readable.
+scheme: dated milestones, not semantic API versions
+current_version: 'ARGUS Enterprise 15.0.1.1170 (named as a supported target build)'
+feed: null
+entries:
+  - date: '2026-05-15'
+    type: breaking
+    highlight: Support ended for ARGUS Enterprise version 13.
+  - date: '2026-05'
+    type: change
+    highlight: >-
+      User administration for ARGUS Enterprise moves to the ARGUS Intelligence Platform.
+  - date: '2026-09'
+    type: addition
+    highlight: Browser-based access to ARGUS Enterprise becomes available.
+  - date: '2026-10'
+    type: breaking
+    highlight: >-
+      Citrix access ends. The ARGUS Cloud portal stays reachable but can no longer launch
+      the application.
+  - date: '2026-12-31'
+    type: breaking
+    highlight: ARGUS Enterprise version 13 is removed from ARGUS Cloud.
+  - date: '2027-01-01'
+    type: breaking
+    highlight: >-
+      All access to ARGUS Enterprise version 13 on ARGUS Cloud is permanently discontinued;
+      ARGUS Intelligence Platform authentication becomes mandatory to connect to the
+      database, requiring AE 14.5.0.930 or AE 15.0.1.1170 or later.
+release_notes:
+  - product: ARGUS Enterprise
+    url: https://www.altusgroup.com/argus/downloads/argus-enterprise/
+    note: Release notes and guides are SharePoint links that require an Altus Group account.
+  - product: ARGUS Developer
+    url: https://www.altusgroup.com/argus/downloads/argus-developer/
+  - product: ARGUS Taliance
+    url: https://www.altusgroup.com/argus/downloads/argus-taliance/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

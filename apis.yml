@@ -52,7 +52,7 @@ tags_raw:
 url: >-
   https://raw.githubusercontent.com/api-evangelist/argus/refs/heads/main/apis.yml
 created: '2024-01-15'
-modified: '2026-04-19'
+modified: '2026-09-14'
 specificationVersion: '0.23'
 apis:
   - aid: argus:argus-api
@@ -63,14 +63,14 @@ apis:
       to extract and ingest data, trigger calculations, and integrate ARGUS models with
       third-party property management, ERP, and analytics systems without logging into
       the ARGUS application.
-    humanURL: https://www.altusgroup.com/solutions/argus-integrations/
+    humanURL: https://www.altusgroup.com/argus/
     tags:
       - API Integration
       - Commercial Real Estate
       - Data Integration
     properties:
       - type: Documentation
-        url: https://www.altusgroup.com/argus/downloads/argus-integration-solutions/
+        url: https://www.altusgroup.com/argus/downloads/
       - type: GettingStarted
         url: https://www.altusgroup.com/support/start-using-argus-intelligence/
   - aid: argus:argus-enterprise
@@ -120,6 +120,7 @@ apis:
       with portfolio dashboards, benchmarking, asset manager, portfolio manager, and fund
       manager capabilities for comprehensive performance monitoring.
     humanURL: https://www.altusgroup.com/solutions/argus-intelligence/
+    baseURL: https://platform.altusintelligence.com/
     tags:
       - Asset Management
       - Benchmarking
@@ -128,20 +129,22 @@ apis:
     properties:
       - type: Documentation
         url: https://www.altusgroup.com/support/start-using-argus-intelligence/
+      - type: Portal
+        url: https://platform.altusintelligence.com/
   - aid: argus:argus-taliance
     name: ARGUS Taliance
     description: >-
       Real estate fund management software for modeling and managing the performance of
       real estate funds, supporting complex fund structures, waterfall calculations, and
       investor reporting.
-    humanURL: https://www.altusgroup.com/solutions/argus-intelligence/
+    humanURL: https://www.altusgroup.com/solutions/argus-taliance/
     tags:
       - Fund Management
       - Real Estate Funds
       - Waterfall Calculations
     properties:
       - type: Documentation
-        url: https://www.altusgroup.com/solutions/argus-intelligence/
+        url: https://www.altusgroup.com/argus/downloads/argus-taliance/
 common:
   - type: DomainSecurity
     url: security/argus-domain-security.yml
@@ -161,14 +164,36 @@ common:
     url: https://www.altusgroup.com/support/
   - type: Training
     url: https://www.altusgroup.com/argus/training/
-  - type: TermsOfService
-    url: https://www.altusgroup.com/terms-of-use/
   - type: PrivacyPolicy
-    url: https://www.altusgroup.com/privacy-policy/
+    url: https://www.altusgroup.com/legal/privacy-policy/
   - type: ReleaseNotes
     url: https://www.altusgroup.com/argus/downloads/
-  - type: Security
-    url: https://www.altusgroup.com/security/
+  - type: GitHubOrganization
+    url: https://github.com/AltusGroup
+  - type: Compliance
+    url: https://www.altusgroup.com/trust-center/
+  - type: TrustCenter
+    url: security/argus-trust-center.yml
+  - type: WellKnown
+    url: well-known/argus-well-known.yml
+  - type: Authentication
+    url: authentication/argus-authentication.yml
+  - type: Conformance
+    url: conformance/argus-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/argus-lifecycle.yml
+  - type: Deprecation
+    url: lifecycle/argus-lifecycle.yml
+  - type: ChangeLog
+    url: changelog/argus-changelog.yml
+  - type: Plans
+    url: plans/argus-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/argus-rate-limits.yml
+  - type: Packages
+    url: packages/argus-packages.yml
+  - type: LLMsTxt
+    url: llms/argus-llms.txt
   - type: Features
     data:
       - name: Industry Standard Platform
@@ -212,3 +237,8 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-09-14'
+  status: enriched
+  artifacts_added: 10
+  pass: local-v3

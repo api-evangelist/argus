@@ -1,0 +1,86 @@
+specification: API Commons Lifecycle
+specificationVersion: '0.1'
+generated: '2026-09-14'
+method: searched
+source: >-
+  https://www.altusgroup.com/support/argus-enterprise-platform-updates/ (HTTP 200) and
+  https://www.altusgroup.com/argus/downloads/ (HTTP 200).
+provider: ARGUS
+providerId: argus
+description: >-
+  Versioning, deprecation and end-of-support posture for the ARGUS platform. Altus Group
+  publishes real, dated end-of-support and migration deadlines for ARGUS Enterprise and
+  names three legacy products as retired — but it does so as product lifecycle prose on
+  support pages, not as an API deprecation policy. There is no API versioning policy, no
+  Sunset/Deprecation header contract, and no status page.
+versioning:
+  scheme: product-release
+  pattern: '<major>.<minor>.<patch>.<build> (e.g. AE 14.5.0.930, AE 15.0.1.1170)'
+  api_versioning: not published
+  note: >-
+    ARGUS Intelligence Platform service prefixes carry a -v1 suffix in the path
+    (core-service-v1, backend-v1, stewardship-v1, mdmapisvc-v1, derived_domains-v1,
+    stress-testing-v1), observed in the platform's own front-end configuration. No
+    versioning policy document accompanies them.
+deprecation_policy:
+  published: true
+  form: dated product end-of-support notices on the support site
+  url: https://www.altusgroup.com/support/argus-enterprise-platform-updates/
+  headers:
+    sunset: not observed
+    deprecation: not observed
+  note: >-
+    Deadlines are communicated in prose with specific calendar dates. No RFC 8594 Sunset or
+    Deprecation response header could be observed, because no ARGUS endpoint answers
+    anonymously.
+end_of_support:
+  - product: ARGUS Enterprise version 13
+    event: Technical support ended
+    date: '2026-05-15'
+    source: https://www.altusgroup.com/support/argus-enterprise-platform-updates/
+  - product: ARGUS Enterprise version 13 on ARGUS Cloud
+    event: Product removed from ARGUS Cloud
+    date: '2026-12-31'
+    source: https://www.altusgroup.com/support/argus-enterprise-platform-updates/
+  - product: ARGUS Enterprise version 13 on ARGUS Cloud
+    event: All access permanently discontinued
+    date: '2027-01-01'
+    source: https://www.altusgroup.com/support/argus-enterprise-platform-updates/
+  - product: ARGUS Cloud Citrix delivery
+    event: >-
+      Citrix access ends; the ARGUS Cloud portal remains reachable but can no longer launch
+      the application
+    date: '2026-10'
+    source: https://www.altusgroup.com/support/argus-enterprise-platform-updates/
+migration_deadlines:
+  - event: User administration moves to the ARGUS Intelligence Platform
+    date: '2026-05'
+  - event: Browser-based ARGUS Enterprise access becomes available
+    date: '2026-09'
+  - event: >-
+      ARGUS Intelligence Platform authentication becomes mandatory to connect to the ARGUS
+      Enterprise database; requires AE 14.5.0.930 or AE 15.0.1.1170 or later
+    date: '2027-01'
+retired_products:
+  - name: ARGUS Valuation DCF
+    status: no longer sold or supported; succeeded by ARGUS Enterprise
+    downloads: https://www.altusgroup.com/argus/downloads/argus-valuation-dcf/
+  - name: ARGUS Valuation Capitalisation
+    status: no longer sold or supported; succeeded by ARGUS Enterprise
+    downloads: https://www.altusgroup.com/argus/downloads/argus-valcap/
+  - name: ARGUS Asset Management (DYNA)
+    status: no longer sold or supported; succeeded by ARGUS Enterprise
+    downloads: https://www.altusgroup.com/argus/downloads/argus-dyna-asset-management/
+status_page:
+  published: false
+  note: >-
+    No status page found. https://altusgroup.statuspage.io/ redirects to Atlassian's
+    marketing site, meaning the Statuspage subdomain is unclaimed. Incident and maintenance
+    communication runs through the support community at https://service.altusgroup.com/s/.
+sla:
+  published: false
+  note: No public SLA document. Availability terms are contractual.
+deprecated_operations: []
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

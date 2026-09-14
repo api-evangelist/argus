@@ -1,0 +1,121 @@
+specification: API Commons Authentication
+specificationVersion: '0.1'
+generated: '2026-09-14'
+method: probed
+source: >-
+  https://service.altusgroup.com/.well-known/openid-configuration (HTTP 200),
+  https://login.microsoftonline.com/4299aec5-b3b8-413e-a612-88e3c0b4c972/v2.0/.well-known/openid-configuration
+  (HTTP 200), and https://platform.altusintelligence.com/config.js (HTTP 200), which names
+  the Entra tenant, client id and scope the ARGUS Intelligence Platform front-end requests.
+provider: ARGUS
+providerId: argus
+description: >-
+  Authentication profile for the ARGUS platform (Altus Group). No public ARGUS API
+  reference or OpenAPI is published, so nothing here is derived from a contract — every
+  entry below was read off a live, anonymous discovery document or the platform's own
+  front-end configuration. Two distinct identity surfaces exist, and they are not the same
+  system.
+schemes:
+  - id: argus-intelligence-entra-oidc
+    name: ARGUS Intelligence Platform — Microsoft Entra ID (OIDC)
+    type: openIdConnect
+    flow: authorization_code
+    pkce: S256
+    openIdConnectUrl: >-
+      https://login.microsoftonline.com/4299aec5-b3b8-413e-a612-88e3c0b4c972/v2.0/.well-known/openid-configuration
+    issuer: https://login.microsoftonline.com/4299aec5-b3b8-413e-a612-88e3c0b4c972/v2.0
+    authorization_endpoint: >-
+      https://login.microsoftonline.com/4299aec5-b3b8-413e-a612-88e3c0b4c972/oauth2/v2.0/authorize
+    token_endpoint: >-
+      https://login.microsoftonline.com/4299aec5-b3b8-413e-a612-88e3c0b4c972/oauth2/v2.0/token
+    jwks_uri: >-
+      https://login.microsoftonline.com/4299aec5-b3b8-413e-a612-88e3c0b4c972/discovery/v2.0/keys
+    tenant_region_scope: EU
+    token_format: JWT
+    id_token_signing_alg: RS256
+    subject_type: pairwise
+    scopes_supported:
+      - openid
+      - profile
+      - email
+      - offline_access
+    resource_scope: api://4e11f0c5-761c-4021-a96f-82e2df6c73a9/.default
+    applies_to:
+      - ARGUS Intelligence Platform
+      - ARGUS ValueInsight
+    note: >-
+      Single-tenant Entra ID application. The platform front-end acquires a token for the
+      resource scope above and presents it to the service prefixes listed under
+      gated_surfaces. Anonymous callers receive HTTP 403 "Missing Authentication Token"
+      from the fronting AWS API Gateway.
+  - id: argus-support-community-oidc
+    name: ARGUS Support Community — Salesforce Experience Cloud (OIDC)
+    type: openIdConnect
+    flow: authorization_code
+    pkce: S256
+    openIdConnectUrl: https://service.altusgroup.com/.well-known/openid-configuration
+    issuer: https://service.altusgroup.com
+    authorization_endpoint: https://service.altusgroup.com/services/oauth2/authorize
+    token_endpoint: https://service.altusgroup.com/services/oauth2/token
+    introspection_endpoint: https://service.altusgroup.com/services/oauth2/introspect
+    revocation_endpoint: https://service.altusgroup.com/services/oauth2/revoke
+    userinfo_endpoint: https://service.altusgroup.com/services/oauth2/userinfo
+    jwks_uri: https://service.altusgroup.com/id/keys
+    registration_endpoint: https://service.altusgroup.com/services/oauth2/register
+    id_token_signing_alg: RS256
+    dpop_supported: true
+    token_endpoint_auth_methods:
+      - client_secret_post
+      - client_secret_basic
+      - private_key_jwt
+    grant_types:
+      - authorization_code
+      - refresh_token
+    applies_to:
+      - ARGUS support community and knowledge base
+    note: >-
+      This is the stock Salesforce Experience Cloud identity provider running under an
+      Altus Group host. Its advertised scopes are the Salesforce platform set (api, web,
+      chatter_api, pardot_api, cdp_*, einstein_gpt_api, mcp_api and so on), not ARGUS
+      product scopes — it authenticates support-community users, not ARGUS API consumers.
+      Recorded because it is the only OIDC discovery document the ARGUS estate serves from
+      its own domain; see scopes/ for why no ARGUS scope catalog is published.
+gated_surfaces:
+  - name: ARGUS Intelligence Platform core service
+    base: https://platform.altusintelligence.com/core-service-v1
+    anonymous_status: 403
+    anonymous_body: '{"message":"Missing Authentication Token"}'
+  - name: ARGUS Intelligence Platform backend
+    base: https://platform.altusintelligence.com/backend-v1
+    anonymous_status: 403
+  - name: ARGUS Intelligence Platform stewardship / file upload
+    base: https://platform.altusintelligence.com/stewardship-v1
+    anonymous_status: 403
+  - name: ARGUS Intelligence Platform master data service
+    base: https://platform.altusintelligence.com/mdmapisvc-v1
+    anonymous_status: 403
+  - name: ARGUS Intelligence Platform derived domains
+    base: https://platform.altusintelligence.com/derived_domains-v1
+    anonymous_status: 403
+  - name: ARGUS Intelligence Platform stress testing
+    base: https://platform.altusintelligence.com/stress-testing-v1
+    anonymous_status: 403
+    note: >-
+      These are the versioned service prefixes the ARGUS Intelligence Platform front-end
+      calls, read from the provider's own config.js. They back the application UI; Altus
+      Group does not publish a reference or a spec for them. Every /swagger/v1/swagger.json
+      and /openapi.json probe under them returned 403.
+argus_api:
+  name: ARGUS API
+  documented_auth: not published
+  note: >-
+    Altus Group markets an "ARGUS API" integration gateway for cloud-enabled ARGUS
+    solutions, but publishes no public authentication reference, no base URL, and no spec.
+    The product page that described it (/argus/products/integration-solutions and
+    /solutions/argus-integrations/) now 301s to https://www.altusgroup.com/argus/, and the
+    integration-solutions download page 301s to the general downloads index. Access is
+    obtained through a customer account and the support community. Nothing is asserted here
+    about its scheme because nothing is published.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
