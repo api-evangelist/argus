@@ -38,7 +38,7 @@ tags:
   - Asset Management
   - Commercial Real Estate
   - Fund Management
-  - Portfolio-Management
+  - Portfolio Management
   - Real Estate Software
   - Valuation
 tags_raw:
@@ -49,6 +49,7 @@ tags_raw:
   - Portfolio Management
   - Real Estate Software
   - Valuation
+  - Portfolio-Management
 url: >-
   https://raw.githubusercontent.com/api-evangelist/argus/refs/heads/main/apis.yml
 created: '2024-01-15'
@@ -83,13 +84,14 @@ apis:
     tags:
       - Cash Flow Modeling
       - Commercial Real Estate
-      - Portfolio-Management
+      - Portfolio Management
       - Valuation
     tags_raw:
       - Cash Flow Modeling
       - Commercial Real Estate
       - Portfolio Management
       - Valuation
+      - Portfolio-Management
     properties:
       - type: Documentation
         url: https://www.altusgroup.com/argus/downloads/argus-enterprise/
@@ -104,12 +106,13 @@ apis:
       - Cash Flow
       - Development
       - Feasibility Analysis
-      - Real-Estate
+      - Real Estate
     tags_raw:
       - Cash Flow
       - Development
       - Feasibility Analysis
       - Real Estate
+      - Real-Estate
     properties:
       - type: Documentation
         url: https://www.altusgroup.com/argus/downloads/argus-developer/
