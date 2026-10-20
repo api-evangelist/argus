@@ -1,5 +1,7 @@
 aid: argus
+
 name: ARGUS
+
 description: >-
   ARGUS is the industry-standard suite of commercial real estate software solutions by
   Altus Group. The ARGUS platform includes ARGUS Enterprise (property valuation and cash
@@ -8,7 +10,9 @@ description: >-
   ARGUS EstateMaster (property development feasibility), and ARGUS Taliance (real estate
   fund management). ARGUS is recognized as the industry standard and taught at 200+ universities
   worldwide. The ARGUS API provides integration capabilities across cloud-enabled ARGUS solutions.
+
 type: Index
+
 deliveryModel:
   model: saas
   open_source: false
@@ -20,6 +24,7 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+
 accessModel:
   pricing: freemium
   onboarding: unknown
@@ -32,7 +37,9 @@ accessModel:
   - plans
   generated: '2026-07-22'
   method: derived
+
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/argus.png
+
 tags:
   - Altus Group
   - Asset Management
@@ -41,6 +48,7 @@ tags:
   - Portfolio Management
   - Real Estate Software
   - Valuation
+
 tags_raw:
   - Altus Group
   - Asset Management
@@ -50,11 +58,116 @@ tags_raw:
   - Real Estate Software
   - Valuation
   - Portfolio-Management
+
 url: >-
   https://raw.githubusercontent.com/api-evangelist/argus/refs/heads/main/apis.yml
+
 created: '2024-01-15'
+
 modified: '2026-09-14'
+
 specificationVersion: '0.23'
+
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+
+common:
+  - type: Hosts
+    url: hosts/argus-hosts.yml
+  - type: Vendors
+    url: vendors/argus-vendors.yml
+  - type: Newsroom
+    url: https://www.altusgroup.com/about-us/newsroom/
+  - type: Login
+    url: https://www.altusgroup.com/login/
+  - type: FinOps
+    url: finops/argus-finops.yml
+  - type: DomainSecurity
+    url: security/argus-domain-security.yml
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/argus-software-solutions
+  - type: Website
+    url: https://www.altusgroup.com/argus/
+  - type: Blog
+    url: https://www.altusgroup.com/insights/
+  - type: Documentation
+    url: https://www.altusgroup.com/argus/downloads/
+  - type: GettingStarted
+    url: https://www.altusgroup.com/support/start-using-argus-intelligence/
+  - type: Portal
+    url: https://cloud.altusplatform.com/login
+  - type: Support
+    url: https://www.altusgroup.com/support/
+  - type: Training
+    url: https://www.altusgroup.com/argus/training/
+  - type: PrivacyPolicy
+    url: https://www.altusgroup.com/legal/privacy-policy/
+  - type: ReleaseNotes
+    url: https://www.altusgroup.com/argus/downloads/
+  - type: GitHubOrganization
+    url: https://github.com/AltusGroup
+  - type: Compliance
+    url: https://www.altusgroup.com/trust-center/
+  - type: TrustCenter
+    url: security/argus-trust-center.yml
+  - type: WellKnown
+    url: well-known/argus-well-known.yml
+  - type: Authentication
+    url: authentication/argus-authentication.yml
+  - type: Conformance
+    url: conformance/argus-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/argus-lifecycle.yml
+  - type: Deprecation
+    url: lifecycle/argus-lifecycle.yml
+  - type: ChangeLog
+    url: changelog/argus-changelog.yml
+  - type: Plans
+    url: plans/argus-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/argus-rate-limits.yml
+  - type: Features
+    data:
+      - name: Industry Standard Platform
+        description: ARGUS is recognized as the industry standard for CRE investment analysis, taught at 200+ universities worldwide.
+      - name: ARGUS API Integration
+        description: Cloud-based API gateway enabling programmatic extraction and ingestion of data across ARGUS solutions.
+      - name: ARGUS Connector
+        description: Pre-built connectors for integrating ARGUS with Yardi, MRI, and other property management systems.
+      - name: Cloud Delivery
+        description: All ARGUS solutions available as cloud-based platform via ARGUS Cloud on Microsoft Azure.
+      - name: ISO 27001 Certified
+        description: ISO/IEC 27001:2022 certified and SOC 2 Type II audited for enterprise security standards.
+      - name: ARGUS Intelligence Dashboard
+        description: Portfolio-level dashboards, performance analytics, and benchmarking across all ARGUS-managed assets.
+  - type: UseCases
+    data:
+      - name: CRE Investment Lifecycle Management
+        description: Manage the full commercial real estate investment lifecycle from acquisition underwriting through asset management and disposition.
+      - name: Portfolio Analytics and Benchmarking
+        description: Monitor portfolio performance across all assets using standardized metrics and industry benchmarking.
+      - name: Third-Party System Integration
+        description: Integrate ARGUS data with property management, ERP, and analytics platforms via the ARGUS API.
+      - name: Fund Management
+        description: Model complex real estate fund structures, waterfalls, and investor reporting with ARGUS Taliance.
+      - name: Development Feasibility
+        description: Assess development project financial viability from initial feasibility through construction completion.
+  - type: Integrations
+    data:
+      - name: Yardi
+        description: Pre-built ARGUS Connector for ingesting lease and property management data from Yardi.
+      - name: MRI Software
+        description: Integration with MRI property management platform for data synchronization.
+      - name: Microsoft Azure
+        description: ARGUS Cloud hosted on Microsoft Azure for cloud delivery and data security.
+      - name: JLL
+        description: JLL uses ARGUS across their global real estate asset management operations.
+      - name: CBRE
+        description: CBRE relies on ARGUS for valuation and investment analysis services worldwide.
+      - name: Power BI
+        description: Export ARGUS data for visualization in Microsoft Power BI dashboards.
+
 apis:
   - aid: argus:argus-api
     name: ARGUS API
@@ -148,102 +261,20 @@ apis:
     properties:
       - type: Documentation
         url: https://www.altusgroup.com/argus/downloads/argus-taliance/
-common:
-  - type: FinOps
-    url: finops/argus-finops.yml
-  - type: DomainSecurity
-    url: security/argus-domain-security.yml
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/argus-software-solutions
-  - type: Website
-    url: https://www.altusgroup.com/argus/
-  - type: Blog
-    url: https://www.altusgroup.com/insights/
-  - type: Documentation
-    url: https://www.altusgroup.com/argus/downloads/
-  - type: GettingStarted
-    url: https://www.altusgroup.com/support/start-using-argus-intelligence/
-  - type: Portal
-    url: https://cloud.altusplatform.com/login
-  - type: Support
-    url: https://www.altusgroup.com/support/
-  - type: Training
-    url: https://www.altusgroup.com/argus/training/
-  - type: PrivacyPolicy
-    url: https://www.altusgroup.com/legal/privacy-policy/
-  - type: ReleaseNotes
-    url: https://www.altusgroup.com/argus/downloads/
-  - type: GitHubOrganization
-    url: https://github.com/AltusGroup
-  - type: Compliance
-    url: https://www.altusgroup.com/trust-center/
-  - type: TrustCenter
-    url: security/argus-trust-center.yml
-  - type: WellKnown
-    url: well-known/argus-well-known.yml
-  - type: Authentication
-    url: authentication/argus-authentication.yml
-  - type: Conformance
-    url: conformance/argus-conformance.yml
-  - type: Lifecycle
-    url: lifecycle/argus-lifecycle.yml
-  - type: Deprecation
-    url: lifecycle/argus-lifecycle.yml
-  - type: ChangeLog
-    url: changelog/argus-changelog.yml
-  - type: Plans
-    url: plans/argus-plans-pricing.yml
-  - type: RateLimits
-    url: rate-limits/argus-rate-limits.yml
-  - type: Packages
-    url: packages/argus-packages.yml
-  - type: LLMsTxt
-    url: llms/argus-llms.txt
-  - type: Features
-    data:
-      - name: Industry Standard Platform
-        description: ARGUS is recognized as the industry standard for CRE investment analysis, taught at 200+ universities worldwide.
-      - name: ARGUS API Integration
-        description: Cloud-based API gateway enabling programmatic extraction and ingestion of data across ARGUS solutions.
-      - name: ARGUS Connector
-        description: Pre-built connectors for integrating ARGUS with Yardi, MRI, and other property management systems.
-      - name: Cloud Delivery
-        description: All ARGUS solutions available as cloud-based platform via ARGUS Cloud on Microsoft Azure.
-      - name: ISO 27001 Certified
-        description: ISO/IEC 27001:2022 certified and SOC 2 Type II audited for enterprise security standards.
-      - name: ARGUS Intelligence Dashboard
-        description: Portfolio-level dashboards, performance analytics, and benchmarking across all ARGUS-managed assets.
-  - type: UseCases
-    data:
-      - name: CRE Investment Lifecycle Management
-        description: Manage the full commercial real estate investment lifecycle from acquisition underwriting through asset management and disposition.
-      - name: Portfolio Analytics and Benchmarking
-        description: Monitor portfolio performance across all assets using standardized metrics and industry benchmarking.
-      - name: Third-Party System Integration
-        description: Integrate ARGUS data with property management, ERP, and analytics platforms via the ARGUS API.
-      - name: Fund Management
-        description: Model complex real estate fund structures, waterfalls, and investor reporting with ARGUS Taliance.
-      - name: Development Feasibility
-        description: Assess development project financial viability from initial feasibility through construction completion.
-  - type: Integrations
-    data:
-      - name: Yardi
-        description: Pre-built ARGUS Connector for ingesting lease and property management data from Yardi.
-      - name: MRI Software
-        description: Integration with MRI property management platform for data synchronization.
-      - name: Microsoft Azure
-        description: ARGUS Cloud hosted on Microsoft Azure for cloud delivery and data security.
-      - name: JLL
-        description: JLL uses ARGUS across their global real estate asset management operations.
-      - name: CBRE
-        description: CBRE relies on ARGUS for valuation and investment analysis services worldwide.
-      - name: Power BI
-        description: Export ARGUS data for visualization in Microsoft Power BI dashboards.
-maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
 x-enrichment:
-  date: '2026-09-14'
-  status: enriched
-  artifacts_added: 10
-  pass: local-v3
+  date: '2026-10-20'
+  status: minimal
+  artifacts_added: 0
+  pass: local-v5
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: The ARGUS API is described only in product marketing; its documentation link resolves to the downloads page, and the ARGUS Intelligence Platform host (platform.altusintelligence.com) serves an SPA shell for every path while a POST to /mcp is refused 403 at CloudFront, so no public contract exists.
+  evidence:
+  - url: https://www.altusgroup.com/argus/argus-api/
+    status: 308
+  - url: https://platform.altusintelligence.com/mcp
+    status: 403
+  - url: https://www.altusgroup.com/llms.txt
+    status: 404
+  checked: '2026-10-20'

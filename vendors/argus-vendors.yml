@@ -1,0 +1,70 @@
+generated: '2026-10-20'
+method: probed
+source: pre-flight dossier (docs platform, portal detections) + CNAME chains and response headers of the hosts apis.yml names
+registry: all/0-working/vendors.yml
+areas_vocabulary:
+- documentation
+- developer-portal
+- api-gateway
+- cdn
+- hosting
+- sdk-generation
+- api-collections
+- status-page
+- support
+- community
+- identity
+- mcp-hosting
+vendors:
+- vendor: cloudfront
+  name: Amazon CloudFront
+  area: cdn
+  host: platform.altusintelligence.com
+  evidence: header:x-amz-cf-id
+  signal: header
+  confidence: high
+  kin_score: []
+- vendor: imperva
+  name: Imperva
+  area: cdn
+  host: www.altusgroup.com
+  evidence: cname:incapdns.net
+  signal: cname
+  confidence: high
+  kin_score: []
+- vendor: vercel
+  name: Vercel
+  area: hosting
+  host: www.altusgroup.com
+  evidence: cname:t5ux5.x.incapdns.net
+  signal: docs-platform
+  confidence: medium
+  kin_score: []
+- vendor: azure-ad-b2c
+  name: Microsoft Entra External ID
+  area: identity
+  host: login.microsoftonline.com
+  evidence: argus-intelligence-entra-openid-configuration.json names azure-ad-b2c in its OAuth metadata
+  signal: oauth-metadata
+  confidence: high
+  kin_score:
+  - authentication
+reliance:
+  areas_vendor_served:
+  - cdn
+  - hosting
+  - identity
+  vendor_count: 4
+  areas_observed: 12
+  share_of_observable_areas: 0.25
+  note: areas where a third party was DETECTED serving this provider; an area absent here was either self-run or not observed, and this script
+    cannot tell those apart
+checked:
+- 'docs-platform: custom'
+- www.altusgroup.com (Login)
+- www.altusgroup.com (Website)
+- www.altusgroup.com (Documentation)
+- www.altusgroup.com (GettingStarted)
+- cloud.altusplatform.com (Portal)
+- www.altusgroup.com (Support)
+- platform.altusintelligence.com (baseURL)
