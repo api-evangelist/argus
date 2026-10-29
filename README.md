@@ -1,4 +1,4 @@
-# ARGUS (argus)
+# ARGUS
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,134 +64,114 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-ARGUS is the industry-standard suite of commercial real estate software solutions by Altus Group. The platform includes ARGUS Enterprise (property valuation and cash flow forecasting), ARGUS Developer (development feasibility), ARGUS Intelligence Platform (portfolio analytics and asset management), ARGUS EstateMaster, and ARGUS Taliance (fund management). The ARGUS API provides integration capabilities across cloud-enabled ARGUS solutions. Recognized as the industry standard and taught at 200+ universities worldwide.
+ARGUS is the industry-standard suite of commercial real estate software solutions by Altus Group. The ARGUS platform includes ARGUS Enterprise (property valuation and cash flow forecasting), ARGUS Developer (development feasibility and project management), ARGUS Intelligence Platform (portfolio analytics, asset management, and fund management), ARGUS EstateMaster (property development feasibility), and ARGUS Taliance (real estate fund management). ARGUS is recognized as the industry standard and taught at 200+ universities worldwide. The ARGUS API provides integration capabilities across cloud-enabled ARGUS solutions.
 
-**URL:** [https://www.altusgroup.com/argus/](https://www.altusgroup.com/argus/)
+**Areas:** Altus Group · Asset Management · Commercial Real Estate · Fund Management · Portfolio Management · Real Estate Software · Valuation
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## ARGUS on APIs.io
 
-## Tags:
+Everything profiled for ARGUS is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/argus/](https://apis.io/providers/argus/)** — or go straight to one of the APIs or properties below.
 
- - Altus Group, Asset Management, Commercial Real Estate, Fund Management, Portfolio Management, Real Estate Software, Valuation
+### APIs (5)
 
-## Timestamps
+- [ARGUS API](https://apis.io/apis/argus/argus-api/) — The ARGUS API is a cloud-based integration gateway that provides programmatic access to data in ARGUS Enterprise and other cloud-enabled ARGUS solutions. It…
+- [ARGUS Enterprise](https://apis.io/apis/argus/argus-enterprise/) — The industry-standard commercial property valuation and cash flow forecasting software providing lease-by-lease modeling, DCF valuations, budgeting,…
+- [ARGUS Developer](https://apis.io/apis/argus/argus-developer/) — Real estate development feasibility and project management software for property developers, appraisers, and financiers covering pro forma modeling,…
+- [ARGUS Intelligence Platform](https://apis.io/apis/argus/argus-intelligence/) — Next-generation real estate investment management platform integrating ARGUS Enterprise with portfolio dashboards, benchmarking, asset manager, portfolio…
+- [ARGUS Taliance](https://apis.io/apis/argus/argus-taliance/) — Real estate fund management software for modeling and managing the performance of real estate funds, supporting complex fund structures, waterfall…
 
-- **Created:** 2024-01-15
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### ARGUS API
-The ARGUS API is a cloud-based integration gateway that provides programmatic access to data in ARGUS Enterprise and other cloud-enabled ARGUS solutions.
+#### Security (3)
 
-**Human URL:** [https://www.altusgroup.com/solutions/argus-integrations/](https://www.altusgroup.com/solutions/argus-integrations/)
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Tags:
+- [Argus Authentication](https://apis.io/security/argus/argus-authentication/)
+- [Argus Domain Security](https://apis.io/security/argus/argus-domain-security/)
+- [Argus Trust Center](https://apis.io/security/argus/argus-trust-center/)
 
- - API Integration, Commercial Real Estate, Data Integration
+#### Plans and pricing (1)
 
-#### Properties
+Published plans, tiers and prices.
 
-- [Documentation](https://www.altusgroup.com/argus/downloads/argus-integration-solutions/)
-- [GettingStarted](https://www.altusgroup.com/support/start-using-argus-intelligence/)
+- [Argus Plans Pricing](https://apis.io/plans/argus/argus-plans-pricing/)
 
-### ARGUS Enterprise
-Industry-standard commercial property valuation and cash flow forecasting software.
+#### Rate limits (1)
 
-**Human URL:** [https://www.altusgroup.com/solutions/argus-enterprise/](https://www.altusgroup.com/solutions/argus-enterprise/)
+Published request limits.
 
-#### Tags:
+- [Argus Rate Limits](https://apis.io/rate-limits/argus/argus-rate-limits/)
 
- - Cash Flow Modeling, Commercial Real Estate, Portfolio Management, Valuation
+#### FinOps (1)
 
-#### Properties
+What the API costs to run, by operation.
 
-- [Documentation](https://www.altusgroup.com/argus/downloads/argus-enterprise/)
+- [Argus Finops](https://apis.io/finops/argus/argus-finops/)
 
-### ARGUS Developer
-Real estate development feasibility and project management software.
+## Where to find this API
 
-**Human URL:** [https://www.altusgroup.com/solutions/argus-developer/](https://www.altusgroup.com/solutions/argus-developer/)
-
-#### Tags:
-
- - Cash Flow, Development, Feasibility Analysis, Real Estate
-
-#### Properties
-
-- [Documentation](https://www.altusgroup.com/argus/downloads/argus-developer/)
-
-### ARGUS Intelligence Platform
-Next-generation real estate investment management platform with portfolio dashboards and benchmarking.
-
-**Human URL:** [https://www.altusgroup.com/solutions/argus-intelligence/](https://www.altusgroup.com/solutions/argus-intelligence/)
-
-#### Tags:
-
- - Asset Management, Benchmarking, Fund Management, Portfolio Analytics
-
-#### Properties
-
-- [Documentation](https://www.altusgroup.com/support/start-using-argus-intelligence/)
-
-### ARGUS Taliance
-Real estate fund management software for complex fund structures and waterfall calculations.
-
-**Human URL:** [https://www.altusgroup.com/solutions/argus-intelligence/](https://www.altusgroup.com/solutions/argus-intelligence/)
-
-#### Tags:
-
- - Fund Management, Real Estate Funds, Waterfall Calculations
-
-#### Properties
-
-- [Documentation](https://www.altusgroup.com/solutions/argus-intelligence/)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.altusgroup.com/argus/)
 - [Documentation](https://www.altusgroup.com/argus/downloads/)
-- [GettingStarted](https://www.altusgroup.com/support/start-using-argus-intelligence/)
-- [Portal](https://cloud.altusplatform.com/login)
+- [Getting started](https://www.altusgroup.com/support/start-using-argus-intelligence/)
 - [Support](https://www.altusgroup.com/support/)
-- [Training](https://www.altusgroup.com/argus/training/)
-- [TermsOfService](https://www.altusgroup.com/terms-of-use/)
-- [PrivacyPolicy](https://www.altusgroup.com/privacy-policy/)
+- [Blog](https://www.altusgroup.com/insights/)
+- [Compliance](https://www.altusgroup.com/trust-center/)
+- [Privacy policy](https://www.altusgroup.com/legal/privacy-policy/)
+- [GitHub](https://github.com/AltusGroup)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Industry Standard Platform | ARGUS is the industry standard for CRE investment analysis, taught at 200+ universities worldwide. |
-| ARGUS API Integration | Cloud-based API gateway enabling programmatic extraction and ingestion of data. |
-| ARGUS Connector | Pre-built connectors for integrating with Yardi, MRI, and other property management systems. |
-| Cloud Delivery | All ARGUS solutions available as cloud-based platform via ARGUS Cloud on Microsoft Azure. |
-| ISO 27001 Certified | ISO/IEC 27001:2022 certified and SOC 2 Type II audited for enterprise security. |
-| ARGUS Intelligence Dashboard | Portfolio-level dashboards, analytics, and benchmarking across all ARGUS-managed assets. |
+**Kin Score 31.5** — thin · rubric 0.24.0 · scored 2026-10-20
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 50.0 |
+| Access clarity | 39.5 |
 
-| Name | Description |
-|------|-------------|
-| CRE Investment Lifecycle Management | Manage the full CRE investment lifecycle from acquisition underwriting through disposition. |
-| Portfolio Analytics and Benchmarking | Monitor portfolio performance with standardized metrics and industry benchmarking. |
-| Third-Party System Integration | Integrate ARGUS data with property management, ERP, and analytics platforms via API. |
-| Fund Management | Model complex real estate fund structures, waterfalls, and investor reporting. |
-| Development Feasibility | Assess development project financial viability from feasibility through completion. |
+**Agent readiness 17.6** — agent-aware
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
 
-| Name | Description |
-|------|-------------|
-| Yardi | Pre-built ARGUS Connector for ingesting lease and property management data from Yardi. |
-| MRI Software | Integration with MRI property management platform for data synchronization. |
-| Microsoft Azure | ARGUS Cloud hosted on Microsoft Azure for cloud delivery and data security. |
-| JLL | JLL uses ARGUS across global real estate asset management operations. |
-| CBRE | CBRE relies on ARGUS for valuation and investment analysis services worldwide. |
-| Power BI | Export ARGUS data for visualization in Microsoft Power BI dashboards. |
+**Regulatory alignment 25.5** — Horizontal (data, software, accessibility, platform)
 
-## Maintainers
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/argus/](https://apis.io/providers/argus/).
 
-**FN:** Kin Lane
+## How this profile is made
 
-**Email:** kin@apievangelist.com
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for ARGUS: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/argus/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
